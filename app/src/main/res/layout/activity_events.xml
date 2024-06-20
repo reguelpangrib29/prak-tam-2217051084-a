@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/rounded_rectangle"
+    tools:context=".EventsActivity">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/header_background"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="-10dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/back_button"
+            android:onClick="navigateToDashboard"
+            android:src="@drawable/ic_back"
+            tools:ignore="OnClick,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/tvEventsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/events_title"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/tvEventsSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvEventsTitle"
+            android:layout_centerHorizontal="true"
+            android:text="@string/events_subtitle"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"/>
+    </RelativeLayout>
+
+    <!-- Daftar Event -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="vertical"
+        android:background="@drawable/border_box"
+        android:padding="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/tvEventListTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="@string/event_list_title"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etSearchEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/search_event"
+            android:inputType="text"
+            android:padding="16dp"
+            android:importantForAutofill="yes" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEventList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+    <!-- Button for filter -->
+    <Button
+        android:id="@+id/btnFilterEvents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:text="@string/filter_event"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

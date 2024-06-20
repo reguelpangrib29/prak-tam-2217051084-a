@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/rounded_rectangle"
+    tools:context=".AirQualityActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header -->
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/header_background"
+                android:padding="16dp">
+
+                <ImageButton
+                    android:id="@+id/btnBack"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="-10dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/back_button"
+                    android:onClick="navigateToDashboard"
+                    android:src="@drawable/ic_back"
+                    tools:ignore="OnClick,TouchTargetSizeCheck" />
+
+                <TextView
+                    android:id="@+id/tvAirQualityTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Pemantauan Kualitas Udara"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="24dp" />
+
+                <TextView
+                    android:id="@+id/tvAirQualitySubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAirQualityTitle"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/campusevo"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginTop="8dp" />
+            </RelativeLayout>
+
+            <!-- Real-time air quality monitoring -->
+
+            <!-- Map showing air quality in different parts of the campus -->
+
+            <ImageView
+                android:id="@+id/ivCampusMap1"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/campus_map"
+                android:scaleType="centerCrop"
+                android:src="@drawable/campus_map_1"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/ivCampusMap2"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/campus_map"
+                android:scaleType="centerCrop"
+                android:src="@drawable/campus_map_2"
+                android:layout_marginBottom="16dp" />
+
+            <ImageView
+                android:id="@+id/ivCampusMap3"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:contentDescription="@string/campus_map"
+                android:scaleType="centerCrop"
+                android:src="@drawable/campus_map_3"
+                android:layout_marginBottom="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/border_box"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvCurrentAirQuality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/current_air_quality"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvAirQualityIndex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="AQI: 50 (Baik)"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvAirQualityDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="@string/air_quality_description"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

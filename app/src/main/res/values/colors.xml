@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_500">#6200EE</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#B0BEC5</color>
+    <color name="blue">#0000FF</color> <!-- Perbarui dengan nilai biru yang benar -->
+    <color name="blue_dark">#0000A0</color> <!-- Warna biru lebih gelap -->
+
+</resources>
